@@ -24,7 +24,7 @@ const Mynewitem = () =>{
             .then(iteminfo=>{
                 swal( productname , " Save Successfully " , "success" );
                 pickDetails("");pickName("");pickPrice("");
-                window.location.href="../#";
+                window.location.href="/#";
             })
         }
         else{

@@ -1,0 +1,32 @@
+[
+    {
+        "fullname":"Amit",
+        "age":"40 year",
+        "city": "Bengaluru",
+        "gender":"Male"
+    },
+    {
+        "fullname":"Mohit",
+        "age":"10 year",
+        "city": "Udisha",
+        "gender":"Male"
+    },
+    {
+        "fullname":"Suraj",
+        "age":"26 year",
+        "city": "Rewa",
+        "gender":"Male"
+    },
+    {
+        "fullname":"Nikki",
+        "age":"24 year",
+        "city": "Indore",
+        "gender":"Female"
+    },
+    {
+        "fullname":"Suman",
+        "age":"21 year",
+        "city": "Bhopal",
+        "gender":"Female"
+    }
+]

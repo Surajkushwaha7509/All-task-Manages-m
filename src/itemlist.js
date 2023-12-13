@@ -62,6 +62,21 @@ const Allitem = () =>{
         }
     }
 
+    const addtocart = (pid) =>{
+        let userid = localStorage.getItem("usertoken");
+        let cartdata = {pid:pid , userid:userid , qty:1};
+        let postdata = {
+            headers:{'Content-type':"Application/json"},
+            method:"POST",
+            body:JSON.stringify(cartdata)
+        };
+        let url = "http://localhost:1111/cart";
+        fetch(url,postdata)
+        .then(response=>response.json())
+        .then(cartinfo=>{
+            swal("Added in Cart" , " 1 item added in your cart " , "success");
+        })
+    }
     return(
         <div className="container">
             <div className="row">
@@ -87,8 +102,15 @@ const Allitem = () =>{
                                 <div className="p-3 border rounded text-center">
                                     <h4> { item.itemname } </h4>
                                     <p>Rs : { item.itemprice }</p>
+                                    <p>
+                                        <img src={`http://127.0.0.1:5500/BackEnd/rest-api/images/${item.itemphoto}`} height="150" width="150"/>
+                                    </p>
                                     <p>{ item.itemdetails }</p>
                                     <p> 
+                                        <button className="btn btn-primary btn-sm me-2" 
+                                        onClick={addtocart.bind(this, item._id)}> 
+                                            Add to Cart 
+                                        </button>
                                         <button className="btn btn-danger btn-sm"
                                         onClick={delitem.bind(this,item._id)}>
                                             <i className="fa fa-trash"></i> 

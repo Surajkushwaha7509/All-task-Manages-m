@@ -1,0 +1,32 @@
+GET http://localhost:1111/itemlist
+
+
+###
+POST http://localhost:1111/itemlist
+Content-Type:application/json
+
+{
+    "name":"Kiwi",
+    "price":"250",
+    "details":"Good Kiwi"
+}
+
+
+###
+GET http://localhost:1111/itemlist/653ce527a6d55054a1ffabdf
+
+
+###
+PUT  http://localhost:1111/itemlist
+Content-Type:application/json
+
+{
+    "itemid":"653ce527a6d55054a1ffabdf",
+    "name":"My Mango 99",
+    "price":"450",
+    "details":"Best Mango"
+}
+
+
+###
+DELETE http://localhost:1111/itemlist/653ce527a6d55054a1ffabdf
